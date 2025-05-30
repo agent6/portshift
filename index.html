@@ -1,183 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PortShift LLC | Network Solutions</title>
-  <!-- Tailwind Play CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Custom Utility Extensions -->
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: {
-              DEFAULT: '#1e3a8a',
-              light: '#2563eb',
-              dark: '#172554',
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PortShift LLC – Network & Cabling Experts</title>
+    <!-- Tailwind Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // Tailwind configuration – extend colors/fonts here if desired
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#1e40af', // indigo-800
+              accent: '#14b8a6', // teal-500
             },
           },
         },
-      },
-    }
-  </script>
-  <style>
-    @layer utilities {
-      .gradient-header {
-        background: linear-gradient(135deg, theme('colors.primary.dark') 0%, theme('colors.primary.DEFAULT') 100%);
-      }
-      .gradient-cta {
-        background: linear-gradient(135deg, theme('colors.primary.DEFAULT') 0%, theme('colors.primary.light') 100%);
-      }
-    }
-  </style>
-</head>
-<body class="font-sans antialiased text-gray-800">
-  <!-- Header / Navigation -->
-  <header class="gradient-header text-white">
-    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-      <a href="#" class="text-xl font-semibold tracking-wide">PortShift LLC</a>
-      <button id="nav-toggle" class="md:hidden focus:outline-none">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-7 h-7">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
-      <nav id="nav-menu" class="hidden md:flex space-x-8 text-base">
-        <a href="#services" class="hover:text-primary-light transition">Services</a>
-        <a href="#about" class="hover:text-primary-light transition">About</a>
-        <a href="#contact" class="hover:text-primary-light transition">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Hero Section -->
-  <section class="bg-gray-50">
-    <div class="max-w-7xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-12 items-center">
-      <div>
-        <h1 class="text-4xl md:text-5xl font-extrabold mb-6 text-primary-dark">Empowering Your Business<br class="hidden md:block" />through Technology</h1>
-        <p class="text-lg mb-8 leading-relaxed">Everything you need to build and maintain superior network environments—designed, deployed, and supported by experts.</p>
-        <a href="#contact" class="inline-block px-8 py-3 rounded-lg text-white font-medium shadow-lg gradient-cta hover:opacity-90 transition">Request a Consultation</a>
-      </div>
-      <div class="relative">
-        <img src="https://images.unsplash.com/photo-1581092795360-7b4e7d1dd880?auto=format&fit=crop&w=900&q=60" alt="Network infrastructure" class="rounded-2xl shadow-xl" />
-      </div>
-    </div>
-  </section>
-
-  <!-- Services Section -->
-  <section id="services" class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-6 text-center">
-      <h2 class="text-3xl md:text-4xl font-bold text-primary-dark mb-4">Our Core Services</h2>
-      <p class="max-w-2xl mx-auto mb-12 text-lg">From architecture to optimization, PortShift delivers full-stack networking expertise tailored to your organization.</p>
-      <div class="grid gap-10 md:grid-cols-3">
-        <!-- Service 1 -->
-        <div class="p-8 rounded-2xl shadow-lg border-t-4 border-primary">
-          <div class="w-14 h-14 flex items-center justify-center bg-primary-light bg-opacity-10 rounded-full mb-6 mx-auto">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c.943 0 1.845.167 2.687.47m3.906 2.133a8.015 8.015 0 01-2.593 3.014M9.313 18.53A7.966 7.966 0 0112 16m0-8a7.966 7.966 0 012.687.47m3.906 2.133A8.015 8.015 0 0112 4m0 12a8.015 8.015 0 01-5.468-2.166m0-7.668A8.015 8.015 0 0112 20" />
-            </svg>
+      };
+    </script>
+    <!-- Favicon placeholder -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🌐</text></svg>" />
+  </head>
+  <body class="font-sans antialiased text-gray-800 scroll-smooth">
+    <!-- ===================== HEADER / NAV ===================== -->
+    <header class="sticky top-0 bg-white/90 backdrop-blur border-b border-gray-100 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <!-- Logo -->
+          <a href="#" class="flex items-center space-x-2 text-primary font-bold text-xl">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17l-4.5-4.5L9.75 8M14.25 7l4.5 4.5-4.5 4.5"/></svg>
+            <span>PortShift&nbsp;LLC</span>
+          </a>
+          <!-- Desktop menu -->
+          <nav class="hidden md:flex space-x-8 text-sm font-medium">
+            <a href="#services" class="hover:text-primary">Services</a>
+            <a href="#about" class="hover:text-primary">About</a>
+            <a href="#contact" class="hover:text-primary">Contact</a>
+          </nav>
+          <!-- Contact CTA -->
+          <div class="hidden md:block">
+            <a href="#contact" class="inline-block px-5 py-2 rounded-full bg-primary text-white hover:bg-primary/90 transition">Get a Quote</a>
           </div>
-          <h3 class="text-xl font-semibold mb-3">Network Design & Configuration</h3>
-          <p class="leading-relaxed">Scalable architectures, secure segmentation, and performance-driven configurations built on proven best practices.</p>
-        </div>
-        <!-- Service 2 -->
-        <div class="p-8 rounded-2xl shadow-lg border-t-4 border-primary">
-          <div class="w-14 h-14 flex items-center justify-center bg-primary-light bg-opacity-10 rounded-full mb-6 mx-auto">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v6a5 5 0 005 5h8a5 5 0 005-5V7M16 3l-4 4m0 0L8 3m8 4H8" />
-            </svg>
-          </div>
-          <h3 class="text-xl font-semibold mb-3">Structured Cabling Design</h3>
-          <p class="leading-relaxed">Standards-compliant copper & fiber infrastructure engineered for longevity, flexibility, and rapid scalability.</p>
-        </div>
-        <!-- Service 3 -->
-        <div class="p-8 rounded-2xl shadow-lg border-t-4 border-primary">
-          <div class="w-14 h-14 flex items-center justify-center bg-primary-light bg-opacity-10 rounded-full mb-6 mx-auto">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12l2 2 4-4m5 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-          </div>
-          <h3 class="text-xl font-semibold mb-3">Wireless Design & Tuning</h3>
-          <p class="leading-relaxed">Predictive RF planning, site surveys, and performance optimization to deliver robust, secure Wi-Fi everywhere you need it.</p>
+          <!-- Mobile burger -->
+          <button id="burger" class="md:hidden text-gray-700 hover:text-primary focus:outline-none" aria-label="Toggle menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section id="about" class="py-20 bg-gray-50">
-    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-      <div>
-        <h2 class="text-3xl md:text-4xl font-bold text-primary-dark mb-4">Why Choose PortShift?</h2>
-        <p class="text-lg leading-relaxed mb-6">We combine decades of hands-on experience with the latest networking technologies to create reliable, future-proof solutions. Our customer-first approach means we listen, design, and deliver with precision—so your business stays connected, productive, and secure.</p>
-        <ul class="space-y-3">
-          <li class="flex items-start"><span class="text-primary mr-2">•</span>Certified network professionals &amp; cabling installers</li>
-          <li class="flex items-start"><span class="text-primary mr-2">•</span>Vendor-agnostic designs aligned to your goals &amp; budget</li>
-          <li class="flex items-start"><span class="text-primary mr-2">•</span>24/7 monitoring and rapid response support options</li>
-          <li class="flex items-start"><span class="text-primary mr-2">•</span>Arizona-based team proudly serving clients nationwide</li>
-        </ul>
+      <!-- Mobile menu panel -->
+      <div id="mobileMenu" class="md:hidden hidden border-t border-gray-100 bg-white">
+        <nav class="px-4 py-4 space-y-2">
+          <a href="#services" class="block text-sm font-medium hover:text-primary">Services</a>
+          <a href="#about" class="block text-sm font-medium hover:text-primary">About</a>
+          <a href="#contact" class="block text-sm font-medium hover:text-primary">Contact</a>
+        </nav>
       </div>
-      <div>
-        <img src="https://images.unsplash.com/photo-1527430253228-e93688616381?auto=format&fit=crop&w=900&q=60" alt="Team collaboration" class="rounded-2xl shadow-xl" />
-      </div>
-    </div>
-  </section>
+    </header>
 
-  <!-- Contact Section -->
-  <section id="contact" class="py-20 bg-white">
-    <div class="max-w-4xl mx-auto px-6 text-center">
-      <h2 class="text-3xl md:text-4xl font-bold text-primary-dark mb-4">Let’s Connect</h2>
-      <p class="max-w-2xl mx-auto mb-8 text-lg">Ready to elevate your network? Reach out today and our experts will schedule a no-obligation consultation.</p>
-      <div class="grid md:grid-cols-2 gap-8">
-        <!-- Contact Details -->
-        <div class="md:text-left space-y-4">
-          <p class="flex items-center justify-center md:justify-start"><svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-primary mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12A4 4 0 118 12a4 4 0 018 0z" /></svg>PortShift LLC, Arizona</p>
-          <p class="flex items-center justify-center md:justify-start"><svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-primary mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26L12 14l1.11-.74L21 8l-9-6-9 6z" /></svg>info@portshift.com</p>
-          <p class="flex items-center justify-center md:justify-start"><svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-primary mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h2l.4 2M7 7h10l1 9H6l1-9zM16 3l1 4M6 3l1 4" /></svg>(928) 369-8702</p>
+    <!-- ===================== HERO ===================== -->
+    <section class="relative isolate overflow-hidden bg-gradient-to-br from-primary via-indigo-700 to-indigo-900 text-white pt-24 pb-32" id="home">
+      <div class="absolute inset-0 -z-10 opacity-20" style="background-image:url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1350&q=80'); background-size:cover;"></div>
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight">
+          Empowering Your Business<br class="hidden sm:block" />Through Technology
+        </h1>
+        <p class="mt-6 text-lg sm:text-xl text-indigo-100 max-w-2xl mx-auto">
+          Everything you need to provide superior network environments: expert network design, structured cabling, and wireless tuning—all tailored to your unique requirements.
+        </p>
+        <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="#services" class="px-8 py-3 rounded-full bg-accent text-gray-900 font-semibold hover:bg-accent/90 transition">Explore Services</a>
+          <a href="#contact" class="px-8 py-3 rounded-full border border-white/30 hover:bg-white/10 transition">Contact Us</a>
         </div>
-        <!-- Contact Form -->
-        <form action="https://formspree.io/f/YOURENDPOINT" method="POST" class="space-y-4 text-left">
-          <div>
-            <label class="block text-sm font-medium mb-1" for="name">Name</label>
-            <input type="text" name="name" id="name" required class="w-full px-4 py-3 border rounded-lg focus:ring-primary focus:border-primary" />
-          </div>
-          <div>
-            <label class="block text-sm font-medium mb-1" for="email">Email</label>
-            <input type="email" name="email" id="email" required class="w-full px-4 py-3 border rounded-lg focus:ring-primary focus:border-primary" />
-          </div>
-          <div>
-            <label class="block text-sm font-medium mb-1" for="message">Message</label>
-            <textarea name="message" id="message" rows="4" required class="w-full px-4 py-3 border rounded-lg focus:ring-primary focus:border-primary"></textarea>
-          </div>
-          <button type="submit" class="w-full py-3 px-6 rounded-lg text-white font-medium shadow-lg gradient-cta hover:opacity-90 transition">Send Message</button>
-        </form>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer -->
-  <footer class="bg-gray-900 text-gray-400 text-sm py-6">
-    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
-      <p>© <span id="year"></span> PortShift LLC. All rights reserved.</p>
-      <nav class="flex space-x-6">
-        <a href="#services" class="hover:text-white">Services</a>
-        <a href="#about" class="hover:text-white">About</a>
-        <a href="#contact" class="hover:text-white">Contact</a>
-      </nav>
-    </div>
-  </footer>
+    <!-- ===================== SERVICES ===================== -->
+    <section id="services" class="py-24 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-14">
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900">Our Core Services</h2>
+          <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+            We design, build, and optimize networks that keep your organization connected, productive, and secure.
+          </p>
+        </div>
+        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- Service 1 -->
+          <div class="bg-white rounded-2xl shadow-sm hover:shadow-md transition p-8 h-full flex flex-col">
+            <div class="flex items-center justify-center w-14 h-14 rounded-full bg-primary/10 text-primary mb-6">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-3v-4h5v8z" /></svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Network Design &amp; Configuration</h3>
+            <p class="text-gray-600 mb-4 flex-grow">End-to-end planning, deployment, and optimization for wired and wireless networks, tailored to your workflows and growth.</p>
+          </div>
+          <!-- Service 2 -->
+          <div class="bg-white rounded-2xl shadow-sm hover:shadow-md transition p-8 h-full flex flex-col">
+            <div class="flex items-center justify-center w-14 h-14 rounded-full bg-primary/10 text-primary mb-6">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 7l9-4 9 4-9 4-9-4z M3 17l9 4 9-4" /></svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Structured Cabling Design</h3>
+            <p class="text-gray-600 mb-4 flex-grow">Robust, standards-based low-voltage cabling solutions (MDF/IDF) delivering flexibility, scalability, and future-proof performance.</p>
+          </div>
+          <!-- Service 3 -->
+          <div class="bg-white rounded-2xl shadow-sm hover:shadow-md transition p-8 h-full flex flex-col">
+            <div class="flex items-center justify-center w-14 h-14 rounded-full bg-primary/10 text-primary mb-6">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c1.657 0 3-1.343 3-3S13.657 2 12 2 9 3.343 9 5s1.343 3 3 3zm0 2c-5 0-9 2.239-9 5v3h18v-3c0-2.761-4-5-9-5z" /></svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Wireless Design &amp; Tuning</h3>
+            <p class="text-gray-600 mb-4 flex-grow">Predictive RF planning, onsite surveys, and fine-tuning for reliable, high-performance wireless coverage—anywhere you operate.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <script>
-    // Mobile menu toggle
-    const toggleBtn = document.querySelector('#nav-toggle');
-    const menu = document.querySelector('#nav-menu');
-    toggleBtn.addEventListener('click', () => {
-      menu.classList.toggle('hidden');
-    });
+    <!-- ===================== ABOUT / VALUE PROP ===================== -->
+    <section id="about" class="py-24 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">Why Choose PortShift?</h2>
+          <p class="text-gray-700 mb-6">As a boutique consultancy, we combine enterprise-class engineering expertise with a personal, white-glove approach—so you get bespoke solutions without the overhead.</p>
+          <ul class="space-y-4 text-gray-600">
+            <li class="flex items-start gap-3"><span class="text-primary"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg></span>Certified network professionals with 15+ years of field experience.</li>
+            <li class="flex items-start gap-3"><span class="text-primary"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg></span>Vendor-agnostic designs focused on reliability, security, and ROI.</li>
+            <li class="flex items-start gap-3"><span class="text-primary"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg></span>24/7 monitoring and support options to keep you online.</li>
+          </ul>
+        </div>
+        <div class="relative">
+          <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1350&q=80" alt="Network cabling" class="rounded-3xl w-full shadow-lg" />
+          <div class="absolute -inset-1 rounded-3xl bg-accent opacity-10 blur"></div>
+        </div>
+      </div>
+    </section>
 
-    // Dynamic year in footer
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-</body>
+    <!-- ===================== CONTACT CTA ===================== -->
+    <section id="contact" class="py-24 bg-gray-50">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">Ready to transform your network?</h2>
+        <p class="text-lg text-gray-600 mb-8">Schedule a consultation today and discover how our tailored solutions can help your business thrive.</p>
+        <div class="inline-flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <a href="mailto:Info@portshift.com" class="px-6 py-3 rounded-full bg-primary text-white font-medium hover:bg-primary/90 transition">Email Us</a>
+          <a href="tel:9283698702" class="px-6 py-3 rounded-full border border-primary text-primary font-medium hover:bg-primary hover:text-white transition">Call 928-369-8702</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="bg-white border-t border-gray-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-sm text-gray-600">© <span id="year"></span> PortShift LLC. All rights reserved.</p>
+        <nav class="flex space-x-6 text-sm">
+          <a href="mailto:Info@portshift.com" class="hover:text-primary">Info@portshift.com</a>
+          <a href="tel:9283698702" class="hover:text-primary">928-369-8702</a>
+        </nav>
+      </div>
+    </footer>
+
+    <!-- ===================== SCRIPTS ===================== -->
+    <script>
+      // Mobile menu toggle
+      const burger = document.getElementById('burger');
+      const mobileMenu = document.getElementById('mobileMenu');
+      burger.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+      // Auto-update copyright year
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
 </html>
