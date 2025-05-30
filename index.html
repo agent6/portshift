@@ -2,174 +2,217 @@
 <html lang="en" class="dark">
   <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>PortShift LLC – Empowering Seamless Connectivity</title>
-    <meta name="description" content="PortShift LLC delivers secure, scalable network solutions tailored to empower your team's performance and reliability.">
-    <!-- Open Graph -->
-    <meta property="og:title" content="PortShift LLC – Empowering Seamless Connectivity">
-    <meta property="og:description" content="Secure, scalable, and human-centered network solutions from strategy to implementation.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.portshift.com">
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="PortShift LLC – Empowering Seamless Connectivity">
-    <meta name="twitter:description" content="Secure, scalable, and human-centered network solutions.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <meta name="description" content="Secure, scalable network solutions, human-centered from strategy to implementation.">
+
+    <!-- External CSS -->
+    <link href="styles.css" rel="stylesheet">
+
+    <!-- TailwindCDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        darkMode: 'class',
-        theme: {
-          extend: {
-            colors: {
-              bgPrimary: '#070F2B',
-              bgSecondary: '#1B1A55',
-              textPrimary: '#9290C3',
-              textSecondary: '#535C91',
-              primary: '#535C91',   // interactive elements
-              accent: '#535C91'     // buttons, highlights
-            }
-          }
-        }
-      };
-    </script>
+
+    <!-- Main JavaScript (includes Tailwind config + interactivity) -->
+    <script src="main.js" defer></script>
   </head>
-  <body class="font-sans antialiased bg-bgPrimary text-textPrimary scroll-smooth">
-    <a href="#main-content" class="sr-only focus:not-sr-only p-2 bg-primary text-bgPrimary">Skip to main content</a>
-    <header class="sticky top-0 bg-bgPrimary/95 backdrop-blur border-b border-bgSecondary z-50">
+
+  <body class="bg-surface text-onSurface font-sans antialiased scroll-smooth">
+    <!-- Skip to content -->
+    <a href="#main-content" class="sr-only focus:not-sr-only p-2 bg-primary text-onPrimary">
+      Skip to main content
+    </a>
+
+    <!-- Header -->
+    <header class="sticky top-0 bg-surface/95 backdrop-blur border-b border-background z-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
-        <a href="#home" class="flex items-center space-x-2 text-primary font-extrabold text-xl" aria-label="PortShift LLC Home">
-          <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9.75 17l-4.5-4.5L9.75 8M14.25 7l4.5 4.5-4.5 4.5"/></svg>
+        <a href="#home" class="flex items-center space-x-2 text-primary font-extrabold text-xl">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9.75 17l-4.5-4.5L9.75 8M14.25 7l4.5 4.5-4.5 4.5"/>
+          </svg>
           <span>PortShift LLC</span>
         </a>
-        <nav class="hidden md:flex space-x-8 text-sm font-medium" aria-label="Primary Navigation">
+        <nav class="hidden md:flex space-x-8 text-sm font-medium">
           <a href="#services" class="hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary">Services</a>
-          <a href="#about"   class="hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary">About</a>
-          <a href="#contact"class="hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary">Contact</a>
+          <a href="#about"    class="hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary">About</a>
+          <a href="#contact"  class="hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary">Contact</a>
         </nav>
         <div class="hidden md:block">
-          <a href="#contact" class="px-5 py-2 rounded-full bg-primary text-bgPrimary hover:bg-primary/90 focus:ring-2 focus:ring-offset-2 focus:ring-primary transition">Get Started</a>
+          <a href="#contact" class="px-5 py-2 rounded-full bg-primary text-onPrimary hover:bg-primary/90 focus:ring-2 focus:ring-primary transition">
+            Get Started
+          </a>
         </div>
-        <button id="theme-toggle" class="mr-4 p-2 rounded-md bg-bgSecondary text-textPrimary hover:bg-bgSecondary/90 focus:ring-2 focus:ring-primary" aria-label="Toggle dark/light mode">🌗</button>
-        <button id="burger" class="md:hidden text-textPrimary hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary" aria-label="Toggle menu">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <button id="theme-toggle" class="mr-4 p-2 rounded-md bg-background text-onBackground hover:bg-background/90 focus:ring-2 focus:ring-primary" aria-label="Toggle theme">
+          🌗
+        </button>
+        <button id="burger" class="md:hidden text-onSurface hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary" aria-label="Toggle menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
         </button>
       </div>
-      <div id="mobileMenu" class="md:hidden hidden border-t border-bgSecondary bg-bgPrimary" aria-hidden="true" aria-label="Mobile Navigation">
+      <div id="mobileMenu" class="md:hidden hidden border-t border-background bg-surface" aria-hidden="true">
         <nav class="px-4 py-4 space-y-2">
           <a href="#services" class="block text-sm font-medium hover:text-primary focus:ring-2 focus:ring-primary">Services</a>
-          <a href="#about"   class="block text-sm font-medium hover:text-primary focus:ring-2 focus:ring-primary">About</a>
-          <a href="#contact"class="block text-sm font-medium hover:text-primary focus:ring-2 focus:ring-primary">Contact</a>
+          <a href="#about"    class="block text-sm font-medium hover:text-primary focus:ring-2 focus:ring-primary">About</a>
+          <a href="#contact"  class="block text-sm font-medium hover:text-primary focus:ring-2 focus:ring-primary">Contact</a>
         </nav>
       </div>
     </header>
+
+    <!-- Main Content -->
     <main id="main-content">
-      <section id="home" class="relative isolate overflow-hidden bg-gradient-to-br from-bgPrimary via-bgSecondary to-bgSecondary text-textPrimary pt-24 pb-32">
+      <!-- Hero -->
+      <section id="home" class="relative isolate overflow-hidden bg-gradient-to-br from-background via-surface to-surface text-onBackground pt-24 pb-32">
         <div class="absolute inset-0 -z-10 opacity-20">
-          <picture>
-            <source srcset="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&amp;fit=crop&amp;w=1350&amp;q=80&amp;fm=webp" type="image/webp">
-            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Network diagram background" class="w-full h-full object-cover" loading="lazy">
-          </picture>
+          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1350&q=80"
+               alt="Network diagram background"
+               class="w-full h-full object-cover"
+               loading="lazy">
         </div>
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-textPrimary">Network Infrastructure Elevated</h1>
-          <p class="mt-6 text-lg sm:text-xl text-textSecondary max-w-2xl mx-auto">Secure, scalable, and human-centered network services crafted to power your business today—and adapt as you grow.</p>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight">
+            Network Infrastructure Elevated
+          </h1>
+          <p class="mt-6 text-lg sm:text-xl text-secondary max-w-2xl mx-auto">
+            Secure, scalable, and human-centered network services crafted to power your business today—and adapt as you grow.
+          </p>
           <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#services" class="px-8 py-3 rounded-full bg-accent text-bgPrimary font-semibold hover:bg-accent/90 focus:ring-2 focus:ring-accent transition">Explore Our Services</a>
-            <a href="#contact" class="px-8 py-3 rounded-full border border-textPrimary/30 hover:bg-textPrimary/10 focus:ring-2 focus:ring-textPrimary transition">Talk to Our Experts</a>
+            <a href="#services"
+               class="px-8 py-3 rounded-full bg-primaryContainer text-primary font-semibold hover:bg-primaryContainer/90 focus:ring-2 focus:ring-primary transition">
+              Explore Our Services
+            </a>
+            <a href="#contact"
+               class="px-8 py-3 rounded-full border border-onBackground/30 hover:bg-onBackground/10 focus:ring-2 focus:ring-onBackground transition">
+              Talk to Our Experts
+            </a>
           </div>
         </div>
       </section>
-      <section id="services" class="py-24 bg-bgSecondary">
+
+      <!-- Services -->
+      <section id="services" class="py-24 bg-surface">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="text-center mb-14">
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-textPrimary">Our Core Capabilities</h2>
-            <p class="mt-4 text-lg text-textSecondary max-w-2xl mx-auto">From strategic planning to turnkey deployment, we deliver end-to-end network solutions that exceed expectations.</p>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-onSurface">Our Core Capabilities</h2>
+            <p class="mt-4 text-lg text-secondary max-w-2xl mx-auto">
+              From strategic planning to turnkey deployment, we deliver end-to-end network solutions that exceed expectations.
+            </p>
           </div>
           <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            <div class="bg-bgPrimary rounded-2xl shadow-md hover:shadow-lg transition p-8 h-full border border-bgSecondary flex flex-col" tabindex="0">
+            <div class="rounded-2xl p-8 h-full border border-background elevation-1 flex flex-col">
               <div class="flex items-center justify-center w-14 h-14 rounded-full bg-primary/20 text-primary mb-6">
-                <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2"> <path d="M13 16h-1v-4h-3v-4h5v8z"/> </svg>
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M13 16h-1v-4h-3v-4h5v8z"/>
+                </svg>
               </div>
-              <h3 class="text-xl font-semibold mb-2 text-textPrimary">Strategic Network Architecture</h3>
-              <p class="text-textSecondary mb-4 flex-grow">Blueprinting robust network frameworks that balance performance, security, and scalability.</p>
+              <h3 class="text-xl font-semibold mb-2 text-onSurface">Strategic Network Architecture</h3>
+              <p class="text-secondary mb-4 flex-grow">
+                Blueprinting robust network frameworks that balance performance, security, and scalability.
+              </p>
             </div>
-            <div class="bg-bgPrimary rounded-2xl shadow-md hover:shadow-lg transition p-8 h-full border border-bgSecondary flex flex-col" tabindex="0">
+            <div class="rounded-2xl p-8 h-full border border-background elevation-1 flex flex-col">
               <div class="flex items-center justify-center w-14 h-14 rounded-full bg-primary/20 text-primary mb-6">
-                <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2"> <path d="M3 7l9-4 9 4-9 4-9-4z M3 17l9 4 9-4"/> </svg>
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M3 7l9-4 9 4-9 4-9-4z M3 17l9 4 9-4"/>
+                </svg>
               </div>
-              <h3 class="text-xl font-semibold mb-2 text-textPrimary">Structured Cabling Solutions</h3>
-              <p class="text-textSecondary mb-4 flex-grow">Designing and installing cabling infrastructures to support today’s bandwidth demands and tomorrow’s innovation.</p>
+              <h3 class="text-xl font-semibold mb-2 text-onSurface">Structured Cabling Solutions</h3>
+              <p class="text-secondary mb-4 flex-grow">
+                Designing and installing cabling infrastructures to support today’s bandwidth demands and tomorrow’s innovation.
+              </p>
             </div>
-            <div class="bg-bgPrimary rounded-2xl shadow-md hover:shadow-lg transition p-8 h-full border border-bgSecondary flex flex-col" tabindex="0">
+            <div class="rounded-2xl p-8 h-full border border-background elevation-1 flex flex-col">
               <div class="flex items-center justify-center w-14 h-14 rounded-full bg-primary/20 text-primary mb-6">
-                <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2"> <path d="M12 8c1.657 0 3-1.343 3-3S13.657 2 12 2 9 3.343 9 5s1.343 3 3 3zm0 2c-5 0-9 2.239-9 5v3h18v-3c0-2.761-4-5-9-5"/> </svg>
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 8c1.657 0 3-1.343 3-3S13.657 2 12 2 9 3.343 9 5s1.343 3 3 3zm0 2c-5 0-9 2.239-9 5v3h18v-3c0-2.761-4-5-9-5"/>
+                </svg>
               </div>
-              <h3 class="text-xl font-semibold mb-2 text-textPrimary">Enterprise Wi-Fi Deployment</h3>
-              <p class="text-textSecondary mb-4 flex-grow">Implementing secure, high-performance wireless networks for seamless connectivity across your facilities.</p>
+              <h3 class="text-xl font-semibold mb-2 text-onSurface">Enterprise Wi-Fi Deployment</h3>
+              <p class="text-secondary mb-4 flex-grow">
+                Implementing secure, high-performance wireless networks for seamless connectivity across your facilities.
+              </p>
             </div>
           </div>
         </div>
       </section>
-      <section id="about" class="py-24 bg-bgPrimary">
+
+      <!-- About -->
+      <section id="about" class="py-24 bg-background">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-textPrimary mb-4">Why Choose PortShift?</h2>
-            <p class="text-textSecondary mb-6">Your network is the backbone of your business. We partner with you to deliver secure, agile, and user-centric connectivity—today and tomorrow.</p>
-            <ul class="space-y-4 text-textSecondary">
-              <li class="flex items-start gap-3"><span class="text-primary"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"> <path d="M5 13l4 4L19 7"/> </svg></span>Certified network professionals with deep industry expertise.</li>
-              <li class="flex items-start gap-3"><span class="text-primary"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"> <path d="M5 13l4 4L19 7"/> </svg></span>Tailored solutions that align with your strategic goals.</li>
-              <li class="flex items-start gap-3"><span class="text-primary"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"> <path d="M5 13l4 4L19 7"/> </svg></span>End-to-end support from design through deployment and beyond.</li>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-onBackground mb-4">Why Choose PortShift?</h2>
+            <p class="text-secondary mb-6">
+              Your network is the backbone of your business. We partner with you to deliver secure, agile, and user-centric connectivity—today and tomorrow.
+            </p>
+            <ul class="space-y-4 text-secondary">
+              <li class="flex items-start gap-3">
+                <span class="text-primary">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 13l4 4L19 7"/>
+                  </svg>
+                </span>
+                Certified network professionals with deep industry expertise.
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-primary">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 13l4 4L19 7"/>
+                  </svg>
+                </span>
+                Tailored solutions that align with your strategic goals.
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-primary">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 13l4 4L19 7"/>
+                  </svg>
+                </span>
+                End-to-end support from design through deployment and beyond.
+              </li>
             </ul>
           </div>
           <div class="relative">
-            <picture>
-              <source srcset="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&amp;fit=crop&amp;w=1350&amp;q=80&amp;fm=webp" type="image/webp">
-              <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="Network engineers collaborating on cabling installation" class="rounded-3xl shadow-lg w-full" loading="lazy">
-            </picture>
-            <div class="absolute -inset-1 rounded-3xl bg-accent opacity-10 blur"></div>
+            <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1350&q=80"
+                 alt="Network engineers collaborating"
+                 class="rounded-3xl shadow-lg w-full"
+                 loading="lazy">
+            <div class="absolute -inset-1 rounded-3xl bg-primaryContainer opacity-10 blur"></div>
           </div>
         </div>
       </section>
-      <section id="contact" class="py-24 bg-bgSecondary">
+
+      <!-- Contact -->
+      <section id="contact" class="py-24 bg-surface">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-textPrimary mb-4">Ready to Elevate Your Network?</h2>
-          <p class="text-lg text-textSecondary mb-8">Contact us for a customized consultation and discover how PortShift can transform your connectivity experience.</p>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-onSurface mb-4">Ready to Elevate Your Network?</h2>
+          <p class="text-lg text-secondary mb-8">
+            Contact us for a customized consultation and discover how PortShift can transform your connectivity experience.
+          </p>
           <div class="inline-flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a href="mailto:Info@portshift.com" class="px-6 py-3 rounded-full bg-primary text-bgPrimary font-medium hover:bg-primary/90 focus:ring-2 focus:ring-primary transition">Email Our Team</a>
-            <a href="tel:9283698702" class="px-6 py-3 rounded-full border border-primary text-primary font-medium hover:bg-primary hover:text-bgPrimary focus:ring-2 focus:ring-primary transition">Schedule a Call</a>
+            <a href="mailto:Info@portshift.com"
+               class="px-6 py-3 rounded-full bg-primary text-onPrimary font-medium hover:bg-primary/90 focus:ring-2 focus:ring-primary transition">
+              Email Our Team
+            </a>
+            <a href="tel:9283698702"
+               class="px-6 py-3 rounded-full border border-primary text-primary font-medium hover:bg-primary hover:text-onPrimary focus:ring-2 focus:ring-primary transition">
+              Schedule a Call
+            </a>
           </div>
         </div>
       </section>
     </main>
-    <footer class="bg-bgPrimary border-t border-bgSecondary">
+
+    <!-- Footer -->
+    <footer class="bg-surface border-t border-background">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <p class="text-sm text-textSecondary/60">© <span id="year"></span> PortShift LLC. All rights reserved.</p>
-        <nav class="flex space-x-6 text-sm" aria-label="Footer Navigation">
+        <p class="text-sm text-secondary/60">
+          © <span id="year"></span> PortShift LLC. All rights reserved.
+        </p>
+        <nav class="flex space-x-6 text-sm">
           <a href="mailto:Info@portshift.com" class="hover:text-primary focus:ring-2 focus:ring-primary">Info@portshift.com</a>
-          <a href="tel:9283698702"            class="hover:text-primary focus:ring-2 focus:ring-primary">928-369-8702</a>
+          <a href="tel:9283698702" class="hover:text-primary focus:ring-2 focus:ring-primary">928-369-8702</a>
         </nav>
       </div>
     </footer>
-    <script>
-      document.getElementById('burger').addEventListener('click', () => {
-        const menu = document.getElementById('mobileMenu');
-        const expanded = menu.classList.toggle('hidden');
-        menu.setAttribute('aria-hidden', expanded);
-        document.querySelector('[aria-label="Toggle menu"]').setAttribute('aria-expanded', !expanded);
-      });
-      const toggle = document.getElementById('theme-toggle');
-      toggle.addEventListener('click', () => {
-        document.documentElement.classList.toggle('dark');
-        localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
-      });
-      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        document.documentElement.classList.add('dark');
-      }
-      document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
   </body>
 </html>
