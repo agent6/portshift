@@ -6,7 +6,7 @@ tailwind.config = {
       colors: {
         surface:          'var(--md-sys-color-surface)',
         background:       'var(--md-sys-color-background)',
-        onSurface:        'var(--md-sys-color-on-surface)',
+        onSurface:        'var(--md-sys-color-on-surface-high)',
         onBackground:     'var(--md-sys-color-on-background)',
         primary:          'var(--md-sys-color-primary)',
         onPrimary:        'var(--md-sys-color-on-primary)',
@@ -24,21 +24,6 @@ document.getElementById('burger').addEventListener('click', () => {
   const hidden = menu.classList.toggle('hidden');
   menu.setAttribute('aria-hidden', hidden);
 });
-
-// Theme toggle
-const toggle = document.getElementById('theme-toggle');
-toggle.addEventListener('click', () => {
-  document.documentElement.classList.toggle('dark');
-  localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
-});
-
-// Initialize theme based on preference
-if (
-  localStorage.theme === 'dark' ||
-  (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
-) {
-  document.documentElement.classList.add('dark');
-}
 
 // Set current year in footer
 document.getElementById('year').textContent = new Date().getFullYear();
