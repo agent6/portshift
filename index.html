@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portshift Networks | Managed Services Provider</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              200: '#bfdbfe',
+              300: '#93c5fd',
+              400: '#60a5fa',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              800: '#1e40af',
+              900: '#1e3a8a'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {font-family: 'Inter', sans-serif;}
+    .glass {background: rgba(255,255,255,0.05); backdrop-filter: blur(10px);}
+  </style>
+</head>
+<body class="text-gray-100 bg-gray-900">
+  <!-- Header -->
+  <header class="fixed w-full z-50 backdrop-blur-lg/30">
+    <nav class="max-w-7xl mx-auto flex items-center justify-between p-4">
+      <a href="#" class="text-2xl font-bold tracking-wide text-white">Portshift<span class="text-teal-400"> Networks</span></a>
+      <ul class="hidden md:flex space-x-6 text-sm">
+        <li><a href="#about" class="hover:text-teal-300 duration-150">About</a></li>
+        <li><a href="#services" class="hover:text-teal-300 duration-150">Services</a></li>
+        <li><a href="#contact" class="hover:text-teal-300 duration-150">Contact</a></li>
+      </ul>
+      <a href="#contact" class="ml-4 inline-block rounded-lg bg-teal-500 hover:bg-teal-400 px-4 py-2 text-sm font-semibold shadow-md duration-150">Get a Quote</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative flex items-center justify-center min-h-screen pt-24">
+    <div class="absolute inset-0 bg-gradient-to-br from-indigo-900 via-blue-900 to-gray-900">
+      <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1400&q=60" alt="Network cables" class="w-full h-full object-cover opacity-20">
+    </div>
+    <div class="relative z-10 max-w-3xl text-center px-4">
+      <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6">Empowering Your Business<br class="hidden md:block"> Through <span class="text-teal-400">Technology</span></h1>
+      <p class="text-lg md:text-xl mb-8 text-gray-300">Professional Managed Services &amp; Network Engineering dedicated to keeping you connected, productive, and secure.</p>
+      <a href="#contact" class="inline-block rounded-lg bg-teal-500 hover:bg-teal-400 px-6 py-3 text-lg font-semibold shadow-lg duration-150">Schedule a Consultation</a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-20 bg-gray-50 text-gray-800">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl font-bold mb-4 text-gray-900">Why Portshift Networks?</h2>
+          <p class="mb-4">We’re a boutique Managed Services Provider (MSP) that partners with small and mid‑sized organizations to architect, deploy, and manage modern network infrastructures. By combining certified expertise, vendor‑agnostic designs, and white‑glove support, we deliver resilient environments that scale with your business.</p>
+          <ul class="space-y-3">
+            <li class="flex items-start"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-500 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span class="ml-3">Tailored solutions built around your workflow</span></li>
+            <li class="flex items-start"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-500 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span class="ml-3">24/7 proactive monitoring &amp; support</span></li>
+            <li class="flex items-start"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-500 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span class="ml-3">Certified engineers &amp; industry standards compliance</span></li>
+          </ul>
+        </div>
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=60" alt="Technician working" class="rounded-2xl shadow-xl">
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="py-20 bg-gray-900 text-gray-100">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-center text-3xl font-bold mb-12">Core Services</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Service 1 -->
+        <div class="glass p-8 rounded-2xl shadow-lg border border-gray-700 hover:border-teal-500 duration-150">
+          <div class="mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v16h16V4H4z" /></svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Network Design &amp; Configuration</h3>
+          <p class="text-sm text-gray-300">From green‑field builds to complex migrations, we architect LAN/WAN infrastructures that prioritize performance, security, and future growth.</p>
+        </div>
+        <!-- Service 2 -->
+        <div class="glass p-8 rounded-2xl shadow-lg border border-gray-700 hover:border-teal-500 duration-150">
+          <div class="mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" /></svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Structured Cabling Design</h3>
+          <p class="text-sm text-gray-300">Certified RCDD design ensures your physical layer is reliable and standards‑compliant—backbone and horizontal—in copper or fiber.</p>
+        </div>
+        <!-- Service 3 -->
+        <div class="glass p-8 rounded-2xl shadow-lg border border-gray-700 hover:border-teal-500 duration-150">
+          <div class="mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-9 6v8" /></svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Wireless Design &amp; Tuning</h3>
+          <p class="text-sm text-gray-300">Predictive RF surveys, heat‑mapping, and ongoing optimization deliver secure coverage and capacity wherever your users roam.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-20 bg-teal-500 text-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-center text-3xl font-bold mb-6">Let’s Talk</h2>
+      <p class="text-center mb-10">Ready to elevate your network? Reach out and a solutions architect will respond within one business day.</p>
+
+      <div class="bg-white rounded-2xl shadow-xl p-8 text-gray-800 max-w-xl mx-auto">
+        <form action="https://formspree.io/f/yourcode" method="POST" class="grid gap-6">
+          <input type="text" name="name" placeholder="Name" required class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-teal-500">
+          <input type="email" name="email" placeholder="Email" required class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-teal-500">
+          <textarea name="message" rows="4" placeholder="Tell us about your project..." class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-teal-500"></textarea>
+          <button type="submit" class="bg-teal-500 hover:bg-teal-600 text-white font-semibold py-3 rounded-lg">Send Message</button>
+        </form>
+        <div class="mt-8 text-center">
+          <p class="text-sm">Prefer email or phone?</p>
+          <p class="font-semibold"><a href="mailto:info@portshift.com" class="underline">info@portshift.com</a> · <a href="tel:19283698702" class="underline">(928) 369‑8702</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-950 text-center text-sm text-gray-500 py-6">
+    © 2025 Portshift Networks. All rights reserved.
+  </footer>
+</body>
+</html>
