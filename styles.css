@@ -1,62 +1,73 @@
-/* Material Dark Theme Variables */
+/*──────────────────────────────────────────────────────────────────────────
+  styles.css — Dark Theme (No Transparency, High Contrast)
+ ──────────────────────────────────────────────────────────────────────────*/
+
+/* Core Surfaces */
 :root {
-  /* Surfaces */
-  --md-sys-color-surface:           #121212;
-  --md-sys-color-background:        #070F2B;
+  --color-surface:           #121212; /* Base surface, not pure black :contentReference[oaicite:6]{index=6} */
+  --color-background:        #070F2B;
 
-  /* On-Surface & On-Background Text */
-  --md-sys-color-on-surface-high:   rgba(255,255,255,0.87);
-  --md-sys-color-on-surface-medium: rgba(255,255,255,0.60);
-  --md-sys-color-on-surface-disabled:rgba(255,255,255,0.38);
-  --md-sys-color-on-background:     rgba(255,255,255,0.87);
+  /* Text Colors */
+  --color-on-surface-primary:   #FFFFFF; /* 21:1 contrast vs #121212 :contentReference[oaicite:7]{index=7} */
+  --color-on-surface-secondary: #CCCCCC; /* ~7:1 contrast vs #121212 :contentReference[oaicite:8]{index=8} */
 
-  /* Primary & Secondary */
-  --md-sys-color-primary:           #535C91;
-  --md-sys-color-on-primary:        #121212;
-  --md-sys-color-primary-container: rgba(81,92,145,0.16);
-  --md-sys-color-secondary:         #9290C3;
-  --md-sys-color-on-secondary:      #121212;
+  /* Brand & Accent */
+  --color-primary:           #535C91; /* Full-strength accent instead of transparency :contentReference[oaicite:9]{index=9} */
+  --color-primary-hover:     #6B6FCF;
+  --color-primary-container: #535C91; /* Flattened fill in place of rgba container :contentReference[oaicite:10]{index=10} */
 
-  /* Elevation Overlays */
-  --elevation-1-opacity:            0.08;
-  --elevation-2-opacity:            0.12;
-  --elevation-3-opacity:            0.16;
+  /* Secondary */
+  --color-secondary:         #9290C3;
 
-  /* Outlines & Dividers */
-  --md-sys-color-outline:           rgba(255,255,255,0.30);
+  /* Borders & Dividers */
+  --color-divider:           #666666; /* 4.6:1 contrast vs #121212 :contentReference[oaicite:11]{index=11} */
 }
 
-/* Text Emphasis Utilities */
-.text-high-emphasis    { color: var(--md-sys-color-on-surface-high); }
-.text-medium-emphasis  { color: var(--md-sys-color-on-surface-medium); }
-.text-disabled         { color: var(--md-sys-color-on-surface-disabled); }
+/* Enable native dark/light controls */
+html {
+  color-scheme: light dark;
+}
 
-/* Elevation Overlays */
-.elevation-1 { background-color: rgba(255,255,255,var(--elevation-1-opacity)); }
-.elevation-2 { background-color: rgba(255,255,255,var(--elevation-2-opacity)); }
-.elevation-3 { background-color: rgba(255,255,255,var(--elevation-3-opacity)); }
+/* Utility Classes */
+.bg-surface        { background-color: var(--color-surface); }
+.bg-background     { background-color: var(--color-background); }
+.bg-primary        { background-color: var(--color-primary); }
+.bg-primary-hover  { background-color: var(--color-primary-hover); }
+.bg-primary-container { background-color: var(--color-primary-container); }
 
-/* Border & Outline */
-.border-outline { border-color: var(--md-sys-color-outline); }
-.focus-ring:focus { outline: 2px solid var(--md-sys-color-outline); }
+.text-onSurface-primary   { color: var(--color-on-surface-primary); }
+.text-onSurface-secondary { color: var(--color-on-surface-secondary); }
+.text-secondary           { color: var(--color-secondary); }
 
-/* Enable native theming */
-html { color-scheme: light dark; }
+.border-divider   { border-color: var(--color-divider); }
+.focus-outline:focus { outline: 2px solid var(--color-divider); }
 
-/* Tailwind Utility Extensions */
-@layer utilities {
-  /* Surface & Background */
-  .bg-surface        { background-color: var(--md-sys-color-surface); }
-  .bg-background     { background-color: var(--md-sys-color-background); }
+/* Elevation Replacements (solid fills instead of overlays) */
+.elevation-1 { background-color: #1B1A55; } /* Surface-variant full-strength :contentReference[oaicite:12]{index=12} */
+.elevation-2 { background-color: #282847; } /* Slightly lighter to show hierarchy :contentReference[oaicite:13]{index=13} */
+.elevation-3 { background-color: #38385F; } /* Higher elevation with brighter fill :contentReference[oaicite:14]{index=14} */
 
-  /* On-Surface & On-Background Text */
-  .text-onSurface    { color: var(--md-sys-color-on-surface-high); }
-  .text-onBackground { color: var(--md-sys-color-on-background); }
-  .text-secondary    { color: var(--md-sys-color-secondary); }
+/* Component Examples */
+/* Card */
+.card {
+  background-color: #1B1A55;
+  border: 1px solid var(--color-divider);
+  color: var(--color-on-surface-primary);
+}
 
-  /* Primary & Accent */
-  .bg-primary            { background-color: var(--md-sys-color-primary); }
-  .text-onPrimary        { color: var(--md-sys-color-on-primary); }
-  .bg-primaryContainer   { background-color: var(--md-sys-color-primary-container); }
-  .border-outline        { border-color: var(--md-sys-color-outline); }
+/* Button */
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-on-surface-primary);
+}
+.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+}
+
+/* Link */
+a {
+  color: var(--color-primary);
+}
+a:hover {
+  color: var(--color-primary-hover);
 }
