@@ -1,0 +1,57 @@
+/* Material Dark Theme Variables */
+:root {
+  /* Core surfaces */
+  --md-sys-color-surface:           #121212;
+  --md-sys-color-background:        #070F2B;
+
+  /* Text & on-surface roles */
+  --md-sys-color-on-surface:        #E0E0E0;
+  --md-sys-color-on-background:     #9290C3;
+
+  /* Primary & secondary brand colors */
+  --md-sys-color-primary:           #535C91;
+  --md-sys-color-on-primary:        #121212;
+  --md-sys-color-primary-container: rgba(81,92,145,0.08);
+
+  --md-sys-color-secondary:         #9290C3;
+  --md-sys-color-on-secondary:      #121212;
+
+  /* Elevation overlay opacities */
+  --elevation-1-opacity:            0.05;
+  --elevation-2-opacity:            0.08;
+  --elevation-3-opacity:            0.12;
+}
+
+/* Elevation Overlays */
+.elevation-1 {
+  background-color: rgba(255, 255, 255, var(--elevation-1-opacity));
+}
+.elevation-2 {
+  background-color: rgba(255, 255, 255, var(--elevation-2-opacity));
+}
+.elevation-3 {
+  background-color: rgba(255, 255, 255, var(--elevation-3-opacity));
+}
+
+/* Enable native theming for controls */
+html {
+  color-scheme: light dark;
+}
+
+/* Tailwind Utility Extensions */
+@layer utilities {
+  /* Surface & Background */
+  .bg-surface        { background-color: var(--md-sys-color-surface); }
+  .bg-background     { background-color: var(--md-sys-color-background); }
+
+  /* Text Colors */
+  .text-onSurface    { color: var(--md-sys-color-on-surface); }
+  .text-onBackground { color: var(--md-sys-color-on-background); }
+  .text-secondary    { color: var(--md-sys-color-secondary); }
+  .text-onSecondary  { color: var(--md-sys-color-on-secondary); }
+
+  /* Primary & Accent */
+  .bg-primary            { background-color: var(--md-sys-color-primary); }
+  .text-onPrimary        { color: var(--md-sys-color-on-primary); }
+  .bg-primaryContainer   { background-color: var(--md-sys-color-primary-container); }
+}
