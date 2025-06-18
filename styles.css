@@ -1,20 +1,20 @@
-/* Modern Dark Mode Palette */
+/* Keynote inspired dark palette */
 :root {
   /* Core surfaces */
-  --md-sys-color-surface:          #121212;
-  --md-sys-color-background:       #181818;
+  --md-sys-color-surface:          #18181b;   /* slightly lighter than background */
+  --md-sys-color-background:       #0c0a09;   /* deep near-black */
 
-  /* Text Emphasis */
-  --md-sys-color-on-surface-high:  #F5F5F5;
-  --md-sys-color-on-surface-medium:#B0B0B0;
+  /* Text emphasis */
+  --md-sys-color-on-surface-high:  #f9fafb;   /* almost white */
+  --md-sys-color-on-surface-medium:#a1a1aa;   /* muted gray */
 
-  /* Brand Accents */
-  --md-sys-color-primary:          #FF5722;
-  --md-sys-color-secondary:        #673AB7;
-  --md-sys-color-highlight:        #FFEB3B;
+  /* Brand accents */
+  --md-sys-color-primary:          #8b5cf6;   /* violet */
+  --md-sys-color-secondary:        #ec4899;   /* fuchsia */
+  --md-sys-color-highlight:        #22d3ee;   /* cyan */
 
-  /* Borders & Focus Rings */
-  --md-sys-color-outline:          #3A3A3A;
+  /* Borders & focus rings */
+  --md-sys-color-outline:          #27272a;   /* dark gray */
 
   /* Typography */
   --font-base:                     'Inter', sans-serif;
@@ -50,4 +50,9 @@ h1, h2, h3, h4, h5, h6 {
   /* Borders & Focus */
   .border-outline  { border-color: var(--md-sys-color-outline); }
   .focus-ring:focus { outline: 2px solid var(--md-sys-color-outline); }
+
+  /* Radial gradient utility used in hero background */
+  .bg-gradient-radial {
+    background-image: radial-gradient(circle at center, var(--tw-gradient-stops));
+  }
 }
