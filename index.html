@@ -26,7 +26,7 @@
     </a>
 
     <!-- Header -->
-    <header class="sticky top-0 bg-surface/95 backdrop-blur border-b border-background z-50">
+    <header class="sticky top-0 bg-background/80 backdrop-blur border-b border-outline z-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
         <a href="#home" class="flex items-center space-x-2 text-primary font-extrabold text-xl">
           <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2">
@@ -62,27 +62,24 @@
     <!-- Main Content -->
     <main id="main-content">
       <!-- Hero Section -->
-      <section id="home" class="relative isolate overflow-hidden bg-gradient-to-br from-background via-surface to-surface text-onBackground pt-24 pb-32">
-        <div class="absolute inset-0 -z-10 opacity-20">
-          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1350&q=80"
-               alt="Network diagram background"
-               class="w-full h-full object-cover"
-               loading="lazy">
+      <section id="home" class="relative isolate overflow-hidden bg-gradient-to-b from-violet-950 via-fuchsia-950 to-background text-onSurface pt-28 pb-36">
+        <div class="absolute inset-0 -z-10 pointer-events-none">
+          <div class="absolute -inset-32 bg-gradient-radial from-violet-600/20 via-fuchsia-600/10 to-transparent blur-3xl"></div>
         </div>
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight">
+          <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight bg-gradient-to-r from-violet-400 to-fuchsia-400 text-transparent bg-clip-text">
             Network Infrastructure Elevated
           </h1>
           <p class="mt-6 text-lg sm:text-xl text-secondary max-w-2xl mx-auto">
             Secure, scalable, and human-centered network services crafted to power your business today—and adapt as you grow.
           </p>
-          <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+          <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
             <a href="#services"
-               class="px-8 py-3 rounded-full bg-primaryContainer text-primary font-semibold hover:bg-primaryContainer/90 focus:ring-2 focus:ring-primary transition">
+               class="px-8 py-3 rounded-full bg-primary text-onPrimary font-semibold hover:bg-primary/90 focus:ring-2 focus:ring-primary transition">
               Explore Our Services
             </a>
             <a href="#contact"
-               class="px-8 py-3 rounded-full border border-onBackground/30 hover:bg-onBackground/10 focus:ring-2 focus:ring-onBackground transition">
+               class="px-8 py-3 rounded-full border border-primary text-primary hover:bg-primary/10 focus:ring-2 focus:ring-primary transition">
               Talk to Our Experts
             </a>
           </div>
@@ -203,7 +200,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-surface border-t border-background">
+    <footer class="bg-background border-t border-outline">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
         <p class="text-sm text-secondary/60">
           © <span id="year"></span> PortShift LLC. All rights reserved.
