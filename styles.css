@@ -1,11 +1,11 @@
-/* Updated Dark-Mode Palette: all solids, no transparencies */
+/* Modern Dark Mode Palette */
 :root {
   /* Core surfaces */
-  --md-sys-color-surface:          #0D0D0D;
-  --md-sys-color-background:       #1A1A1A;
+  --md-sys-color-surface:          #121212;
+  --md-sys-color-background:       #181818;
 
   /* Text Emphasis */
-  --md-sys-color-on-surface-high:  #F7F7F7;
+  --md-sys-color-on-surface-high:  #F5F5F5;
   --md-sys-color-on-surface-medium:#B0B0B0;
 
   /* Brand Accents */
@@ -15,10 +15,22 @@
 
   /* Borders & Focus Rings */
   --md-sys-color-outline:          #3A3A3A;
+
+  /* Typography */
+  --font-base:                     'Inter', sans-serif;
 }
 
 /* Native theming */
 html { color-scheme: light dark; }
+
+body {
+  font-family: var(--font-base);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+}
 
 /* Tailwind Utility Extensions */
 @layer utilities {
