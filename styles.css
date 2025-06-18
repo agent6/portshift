@@ -1,23 +1,46 @@
-/* Keynote inspired dark palette */
+/* Modern Material-inspired color system */
 :root {
-  /* Core surfaces */
-  --md-sys-color-surface:          #18181b;   /* slightly lighter than background */
-  --md-sys-color-background:       #0c0a09;   /* deep near-black */
+  /* Light scheme */
+  --md-sys-color-surface:           #ffffff;
+  --md-sys-color-background:        #f5f5f5;
+  --md-sys-color-on-background:     #1e293b;
 
   /* Text emphasis */
-  --md-sys-color-on-surface-high:  #f9fafb;   /* almost white */
-  --md-sys-color-on-surface-medium:#a1a1aa;   /* muted gray */
+  --md-sys-color-on-surface-high:   #1e293b;
+  --md-sys-color-on-surface-medium: #475569;
 
   /* Brand accents */
-  --md-sys-color-primary:          #8b5cf6;   /* violet */
-  --md-sys-color-secondary:        #ec4899;   /* fuchsia */
-  --md-sys-color-highlight:        #22d3ee;   /* cyan */
+  --md-sys-color-primary:           #6366f1;  /* indigo */
+  --md-sys-color-on-primary:        #ffffff;
+  --md-sys-color-primary-container: #e0e7ff;
+  --md-sys-color-secondary:         #ec4899;  /* fuchsia */
+  --md-sys-color-on-secondary:      #ffffff;
+  --md-sys-color-highlight:         #22d3ee;  /* cyan */
 
   /* Borders & focus rings */
-  --md-sys-color-outline:          #27272a;   /* dark gray */
+  --md-sys-color-outline:           #d1d5db;
 
   /* Typography */
-  --font-base:                     'Inter', sans-serif;
+  --font-base:                      'Inter', sans-serif;
+}
+
+/* Dark scheme overrides */
+html.dark {
+  --md-sys-color-surface:           #1c1b1f;
+  --md-sys-color-background:        #1c1b1f;
+  --md-sys-color-on-background:     #e6e1e5;
+
+  --md-sys-color-on-surface-high:   #e6e1e5;
+  --md-sys-color-on-surface-medium: #cac4d0;
+
+  --md-sys-color-primary:           #d0bcff;
+  --md-sys-color-on-primary:        #381e72;
+  --md-sys-color-primary-container: #4f378b;
+  --md-sys-color-secondary:         #ccc2dc;
+  --md-sys-color-on-secondary:      #332d41;
+  --md-sys-color-highlight:         #22d3ee;
+
+  --md-sys-color-outline:           #938f99;
 }
 
 /* Native theming */
@@ -39,13 +62,18 @@ h1, h2, h3, h4, h5, h6 {
   .bg-background   { background-color: var(--md-sys-color-background); }
 
   /* Text */
-  .text-primary    { color: var(--md-sys-color-on-surface-high); }
-  .text-secondary  { color: var(--md-sys-color-on-surface-medium); }
+  .text-onSurface     { color: var(--md-sys-color-on-surface-high); }
+  .text-onBackground  { color: var(--md-sys-color-on-background); }
+  .text-primary       { color: var(--md-sys-color-primary); }
+  .text-onPrimary     { color: var(--md-sys-color-on-primary); }
+  .text-secondary     { color: var(--md-sys-color-secondary); }
+  .text-onSecondary   { color: var(--md-sys-color-on-secondary); }
 
   /* Accents */
-  .bg-primary      { background-color: var(--md-sys-color-primary); }
-  .bg-secondary    { background-color: var(--md-sys-color-secondary); }
-  .bg-highlight    { background-color: var(--md-sys-color-highlight); }
+  .bg-primary           { background-color: var(--md-sys-color-primary); }
+  .bg-primaryContainer  { background-color: var(--md-sys-color-primary-container); }
+  .bg-secondary         { background-color: var(--md-sys-color-secondary); }
+  .bg-highlight         { background-color: var(--md-sys-color-highlight); }
 
   /* Borders & Focus */
   .border-outline  { border-color: var(--md-sys-color-outline); }
